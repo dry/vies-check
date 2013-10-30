@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope 
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:tns1="urn:ec.europa.eu:taxud:vies:services:checkVat:types" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:impl="urn:ec.europa.eu:taxud:vies:services:checkVat" 
+    xmlns:apachesoap="http://xml.apache.org/xml-soap" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+    <SOAP-ENV:Body>
+        <tns1:checkVat xmlns:tns1="urn:ec.europa.eu:taxud:vies:services:checkVat:types">
+            <tns1:countryCode>{{ country_code }}</tns1:countryCode>
+            <tns1:vatNumber>{{ vat_number }}</tns1:vatNumber>
+        </tns1:checkVat>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

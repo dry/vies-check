@@ -1,0 +1,12 @@
+{application, vies_check,
+ [
+  {description, "VIES Service Check"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { vies_check_app, []}},
+  {env, []}
+ ]}.
