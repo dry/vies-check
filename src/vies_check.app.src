@@ -2,7 +2,7 @@
  [
   {description, "VIES Service Check"},
   {vsn, "1"},
-  {registered, []},
+  {registered, [vies_check_sup]},
   {applications, [
                   kernel,
                   stdlib

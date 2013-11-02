@@ -2,15 +2,13 @@
 
 -behaviour(application).
 
-%% Application callbacks
--export([start/2, stop/1]).
+-export([start/2,
+	 stop/1]).
 
-%% ===================================================================
-%% Application callbacks
-%% ===================================================================
+-define(APPS, [ranch, crypto, cowboy, inets]).
 
 start(_StartType, _StartArgs) ->
-    application:start(inets),
+    [application:start(App) || App <- ?APPS],
     vies_check_sup:start_link().
 
 stop(_State) ->

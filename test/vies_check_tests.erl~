@@ -1,7 +1,0 @@
--module(vies_check_tests).
-
--include_lib("eunit/include/eunit.hrl").
-
-request_test() ->
-    vies_check:request("GB", "12345678"),
-    ok.
